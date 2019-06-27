@@ -17,7 +17,7 @@ EXPOSE 8080 9990 9090
 #RUN chown -R docker /opt/wildfly/bin/standalone.sh
 
 #USER root
-#RUN chown -R root /opt/wildfly/bin/standalone.sh
+RUN chmod +x /opt/wildfly/bin/standalone.sh
 
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
